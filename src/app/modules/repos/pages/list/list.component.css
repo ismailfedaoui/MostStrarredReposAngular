@@ -1,0 +1,32 @@
+.example-card {
+  min-width: 100%;
+  margin-bottom: 0.5%;
+  padding-left: 7%;
+}
+.badge{
+  font-size: 85%;
+  margin-right: 0.5%;
+  font-weight: 540;
+}
+
+mat-card img{
+  object-fit: cover;
+  width: 10%;
+  height: 8%;
+}
+::ng-deep .mat-card-header-text {
+  margin: 0px;
+  width: 100%;
+}
+ .row{
+  margin-right: 0px;
+ }
+ pagination-controls{
+   text-align: center;
+ }
+.createdby{
+  font-weight: 420;
+}
+.description{
+  font-weight: 420;
+}

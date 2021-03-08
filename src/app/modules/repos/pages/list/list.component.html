@@ -1,0 +1,21 @@
+<div class="row" *ngFor="let item of data?.items | paginate: config">
+<mat-card class="example-card" >
+    <mat-card-header >
+      <img mat-card-avatar class="example-header-image" src="{{item.owner.avatar_url}}">
+      <mat-card-title>
+        {{item.name}}
+      </mat-card-title>
+      <mat-card-subtitle class="description">
+        {{item.description}}
+      </mat-card-subtitle>
+      <mat-card-subtitle>
+        <span class="badge badge-secondary">Stars : {{item.watchers}}</span>
+        <span class="badge badge-secondary">Issues : {{item.open_issues}}</span>
+        <span class="createdby"> Created {{ now | amDifference : item.created_at : 'days' }} days ago by {{item.owner.login}}</span>
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>
+<br>
+<pagination-controls *ngIf="data" (pageChange)="pageChanged($event)"></pagination-controls>
+<br>
